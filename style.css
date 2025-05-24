@@ -10,13 +10,39 @@
     padding: 0;
 }
 
-body{
-    margin: 0;
+/* garante que a página ocupe 100% da altura */
+html, body {
+  height: 100%;
+ 
 }
 
-.background_principal{
-   width: 100vw;
-   height: 100vh;
+/* imagem de fundo fixa, cobrindo toda a tela */
+body {
+  background: url("img/img_fundo_fim_jogo.jpg") no-repeat center center fixed;
+  background-size: cover;
+  /* continua usando flex ou grid para seu layout se quiser */
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerP{
+    width: 30%;
+    height: 90%;
+    background-color: rgba(251, 249, 252, 0.199);
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-color: black;
 }
 
 .cabecalho{
@@ -33,7 +59,6 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat; /* Evita repetição da imagem */
     margin: 0;
-   
 }
 
 .rodape{
@@ -50,15 +75,26 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat; /* Evita repetição da imagem */
     margin: 0;
-  
+}
+
+.botao_jogar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:80%
 }
 
 .botao{
     display: flex;
+    height: 150%;
+    width: 30%;
     justify-content: center;
     text-align: center;
+    align-items: center;
     background-color: rgb(166, 7, 240);
     font-family: "Anek Odia", "Cinzel Decorative";
+    border-radius: 8%;
+    padding: 0% 5%;
 }
 
 .intro{
@@ -66,3 +102,23 @@ body{
     justify-content: center;
 }
 
+.mago{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tiutlo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.balao_dialogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 100%; 
+}
